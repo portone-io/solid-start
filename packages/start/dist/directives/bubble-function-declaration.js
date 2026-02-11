@@ -1,0 +1,23 @@
+import * as t from "@babel/types";
+export function bubbleFunctionDeclaration(path) {
+    const decl = path.node;
+    // Check if declaration is FunctionDeclaration
+    if (decl.id) {
+        const block = (path.findParent(current => current.isBlockStatement()) ||
+            path.scope.getProgramParent().path);
+        if (path.parentPath.isExportNamedDeclaration()) {
+            path.parentPath.replaceWith(t.exportNamedDeclaration(undefined, [t.exportSpecifier(decl.id, decl.id)]));
+        }
+        else if (path.parentPath.isExportDefaultDeclaration()) {
+            path.replaceWith(decl.id);
+        }
+        else {
+            path.remove();
+        }
+        const [tmp] = block.unshiftContainer("body", t.variableDeclaration("const", [
+            t.variableDeclarator(decl.id, t.functionExpression(decl.id, decl.params, decl.body, decl.generator, decl.async)),
+        ]));
+        block.scope.registerDeclaration(tmp);
+        tmp.skip();
+    }
+}

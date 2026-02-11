@@ -1,6 +1,6 @@
 {
   "name": "@solidjs/start",
-  "version": "2.0.0-alpha.2",
+  "version": "2.0.0-alpha.3",
   "type": "module",
   "scripts": {
     "build": "pnpm validate-imports && tsc && node scripts/build.js",
@@ -10,15 +10,15 @@
     "validate-imports": "node scripts/validate-imports.js"
   },
   "exports": {
-    ".": "./src/index.tsx",
-    "./config": "./src/config/index.ts",
-    "./server": "./src/server/index.tsx",
-    "./client": "./src/client/index.tsx",
-    "./router": "./src/router.tsx",
-    "./server/spa": "./src/server/spa/index.tsx",
-    "./client/spa": "./src/client/spa/index.tsx",
-    "./middleware": "./src/middleware/index.ts",
-    "./http": "./src/http/index.ts",
+    ".": "./dist/index.jsx",
+    "./config": "./dist/config/index.js",
+    "./server": "./dist/server/index.jsx",
+    "./client": "./dist/client/index.jsx",
+    "./router": "./dist/router.jsx",
+    "./server/spa": "./dist/server/spa/index.jsx",
+    "./client/spa": "./dist/client/spa/index.jsx",
+    "./middleware": "./dist/middleware/index.js",
+    "./http": "./dist/http/index.js",
     "./env": "./env.d.ts"
   },
   "publishConfig": {
