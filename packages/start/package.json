@@ -53,7 +53,7 @@
     "h3": "npm:h3@2.0.1-rc.4",
     "html-to-image": "^1.11.13",
     "micromatch": "^4.0.8",
-    "path-to-regexp": "^8.2.0",
+    "path-to-regexp": "^8.4.0",
     "pathe": "^2.0.3",
     "radix3": "^1.1.2",
     "seroval": "^1.4.1",
