@@ -1,6 +1,6 @@
 {
   "name": "@solidjs/start",
-  "version": "2.0.0-alpha.4",
+  "version": "2.0.0-alpha.5",
   "type": "module",
   "scripts": {
     "build": "pnpm validate-imports && tsc && node scripts/build.js",

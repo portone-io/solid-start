@@ -170,8 +170,8 @@ export function solidStart(options) {
         serverFunctionsPlugin({
             manifest: VIRTUAL_MODULES.serverFnManifest,
             runtime: {
-                server: normalizePath(fileURLToPath(new URL("../server/server-fns-runtime.ts", import.meta.url))),
-                client: normalizePath(fileURLToPath(new URL("../server/server-runtime.ts", import.meta.url))),
+                server: normalizePath(fileURLToPath(new URL("../server/server-fns-runtime.js", import.meta.url))),
+                client: normalizePath(fileURLToPath(new URL("../server/server-runtime.js", import.meta.url))),
             },
         }),
         {
