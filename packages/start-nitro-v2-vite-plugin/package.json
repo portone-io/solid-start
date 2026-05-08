@@ -23,7 +23,7 @@
     }
   },
   "dependencies": {
-    "nitropack": "^2.11.10"
+    "nitropack": "^2.13.4"
   },
   "devDependencies": {
     "vite": "^7.1.10"
