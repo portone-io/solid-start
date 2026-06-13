@@ -48,7 +48,7 @@
     "defu": "^6.1.4",
     "error-stack-parser": "^2.1.4",
     "es-module-lexer": "^1.7.0",
-    "esbuild": "^0.25.3",
+    "esbuild": "^0.28.1",
     "fast-glob": "^3.3.3",
     "h3": "npm:h3@2.0.1-rc.4",
     "html-to-image": "^1.11.13",
